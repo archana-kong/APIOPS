@@ -165,7 +165,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: kong-configurations-customer-api
-          path: .github/artifacts/customer/*.yaml
+          path: .github/artifacts/customer/kong.yaml
 
 
       # - name: Create PR for changed Kong Gateway Configuration
