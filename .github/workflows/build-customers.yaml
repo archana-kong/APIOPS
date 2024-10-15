@@ -6,8 +6,8 @@ on:
     branches:
       - main
       - feat/**
-      # paths:
-      # - 'sales/customer/opeanapi.yaml'
+    # paths:
+    #   - sales/customer/kong/.generated/kong.yaml
       # - 'sales/customer/kong/**'
       # paths-ignore:
       # - 'PRD/**'
@@ -158,11 +158,23 @@ jobs:
       - name: Check status for files to be committed
         run: git status
 
+      - name: Upload Artifacts
+        # Artifacts are the files that are built along the way of the pipeline but are not committed to the repo
+        uses: actions/upload-artifact@v3
+        with:
+          name: kong-configurations-customer-api
+          path: .github/artifacts/customer/*.yaml
+
+      # - name: Create PR for changed Kong Gateway Configuration
+      #   uses: peter-evans/create-pull-request@v5
+      #   with:
+      #     title: Stage Kong Gateway Configuration
+      #     body: "Merging this PR will result in the following changes deployed to PRD \n\n ```\n${{env.DIFF}}\n```"
+      #     add-paths: |
+      #       .github/artifacts/customer/*.yaml
+      #       sales/customer/kong/.generated/*.yaml
       - name: Create PR for changed Kong Gateway Configuration
+        # The only file that should be changed for this PR is platform/kong/.generated/kong.yaml
         uses: peter-evans/create-pull-request@v5
         with:
           title: Stage Kong Gateway Configuration
-          body: "Merging this PR will result in the following changes deployed to PRD \n\n ```\n${{env.DIFF}}\n```"
-          add-paths: |
-            .github/artifacts/customer/*.yaml
-            sales/customer/kong/.generated/*.yaml
