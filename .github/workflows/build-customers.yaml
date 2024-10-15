@@ -111,6 +111,7 @@ jobs:
         run: |
           cp sales/customer/kong/.generated/kong.yaml \
              .github/artifacts/customer/kong.yaml
+          cat .github/artifacts/customer/kong.yaml
       
       - name: Check directory status for customer API
         run: ls -l sales/customer/kong/.generated/
@@ -164,6 +165,7 @@ jobs:
         with:
           name: kong-configurations-customer-api
           path: .github/artifacts/customer/*.yaml
+        run: cat .github/artifacts/customer/kong.yaml
 
       # - name: Create PR for changed Kong Gateway Configuration
       #   uses: peter-evans/create-pull-request@v5
