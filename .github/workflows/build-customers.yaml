@@ -183,7 +183,7 @@ jobs:
       #     title: Stage Kong Gateway Configuration
       - name: Add changes
         run: |
-          git add .github/artifacts/customer/*.yaml
+          git add -f .github/artifacts/customer/*.yaml
           git add sales/customer/kong/.generated/kong.yaml
       
       - name: Commit changes
