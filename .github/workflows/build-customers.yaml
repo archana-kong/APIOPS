@@ -181,15 +181,15 @@ jobs:
       #   uses: peter-evans/create-pull-request@v5
       #   with:
       #     title: Stage Kong Gateway Configuration
-      - name: Add changes
-        run: |
-          git add -f .github/artifacts/customer/*.yaml
-          git add -f sales/customer/kong/.generated/kong.yaml
+      # - name: Add changes
+      #   run: |
+      #     git add -f .github/artifacts/customer/*.yaml
+      #     git add -f sales/customer/kong/.generated/kong.yaml
       
-      - name: Commit changes
-        run: |
-          git commit -m "Update Kong Gateway configuration"
-        continue-on-error: true  # Ignore error if no changes to commit
+      # - name: Commit changes
+      #   run: |
+      #     git commit -m "Update Kong Gateway configuration"
+      #   continue-on-error: true  # Ignore error if no changes to commit
 
       - name: Check status for files to be committed
         run: git status
