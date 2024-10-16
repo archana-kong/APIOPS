@@ -176,8 +176,31 @@ jobs:
       #     add-paths: |
       #       .github/artifacts/customer/*.yaml
       #       sales/customer/kong/.generated/*.yaml
+      # - name: Create PR for changed Kong Gateway Configuration
+      #   # The only file that should be changed for this PR is platform/kong/.generated/kong.yaml
+      #   uses: peter-evans/create-pull-request@v5
+      #   with:
+      #     title: Stage Kong Gateway Configuration
+      - name: Add changes
+        run: |
+          git add .github/artifacts/customer/*.yaml
+          git add sales/customer/kong/.generated/kong.yaml
+      
+      - name: Commit changes
+        run: |
+          git commit -m "Update Kong Gateway configuration"
+        continue-on-error: true  # Ignore error if no changes to commit
+
+      - name: Check status for files to be committed
+        run: git status
+
       - name: Create PR for changed Kong Gateway Configuration
-        # The only file that should be changed for this PR is platform/kong/.generated/kong.yaml
         uses: peter-evans/create-pull-request@v5
         with:
-          title: Stage Kong Gateway Configuration
+          title: "Stage Kong Gateway Configuration"
+          body: "Merging this PR will result in the following changes deployed to PRD \n\n ```\n${{env.DIFF}}\n```"
+          branch: "update/kong-configs"
+          commit-message: "Auto-generated Kong Gateway config update"
+          add-paths: |
+          - .github/artifacts/customer/*.yaml
+            sales/customer/kong/.generated/kong.yaml
