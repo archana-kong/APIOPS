@@ -200,5 +200,4 @@ jobs:
           title: Stage Kong Gateway Configuration
           body: "Merging this PR will result in the following changes deployed to PRD \n\n ```\n${{env.DIFF}}\n```"
           add-paths: |
-            .github/artifacts/customer/*.yaml
             sales/customer/kong/.generated/*.yaml
