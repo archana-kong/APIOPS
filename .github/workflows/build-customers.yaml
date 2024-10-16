@@ -184,7 +184,7 @@ jobs:
       - name: Add changes
         run: |
           git add -f .github/artifacts/customer/*.yaml
-          git add sales/customer/kong/.generated/kong.yaml
+          git add -f sales/customer/kong/.generated/kong.yaml
       
       - name: Commit changes
         run: |
