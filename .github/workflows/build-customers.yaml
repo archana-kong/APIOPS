@@ -197,10 +197,8 @@ jobs:
       - name: Create PR for changed Kong Gateway Configuration
         uses: peter-evans/create-pull-request@v5
         with:
-          title: "Stage Kong Gateway Configuration"
+          title: Stage Kong Gateway Configuration
           body: "Merging this PR will result in the following changes deployed to PRD \n\n ```\n${{env.DIFF}}\n```"
-          branch: "update/kong-configs"
-          commit-message: "Auto-generated Kong Gateway config update"
           add-paths: |
-          - .github/artifacts/customer/*.yaml
-            sales/customer/kong/.generated/kong.yaml
+            .github/artifacts/customer/*.yaml
+            sales/customer/kong/.generated/*.yaml
