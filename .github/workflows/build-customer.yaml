@@ -72,7 +72,7 @@ jobs:
           deck gateway ping \
           --konnect-control-plane-name ${{vars.KONNECT_INTERNAL_CP}} \
           --konnect-token ${{ secrets.KONNECT_PAT }} \
-          --konnect-addr ${{vars.KONNECT_ADDR}
+          --konnect-addr ${{vars.KONNECT_ADDR}}
 
       - name: deck diff
         id: deck-diff
