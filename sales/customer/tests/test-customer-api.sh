@@ -22,7 +22,6 @@ for i in {1..10}; do
   else
     echo "Request #$i: Failed (HTTP Status: $STATUS)"
     ((failure_count++))
-    exit 1
   fi
 done
 
