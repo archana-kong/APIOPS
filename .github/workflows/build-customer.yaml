@@ -50,6 +50,7 @@ jobs:
           deck file add-tags sales customer \
           --selector "$.services[*]" \
           --selector "$.services[*].routes[*]"  \
+          --selector "$.consumers[*]" \
           --output-file sales/customer/kong/.generated/kong.yaml
 
       - name: Add environment Specific Patch
