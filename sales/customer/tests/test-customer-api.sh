@@ -25,9 +25,3 @@ for i in {1..10}; do
     exit 1
   fi
 done
-
-# Print the final results
-echo "----------------------------------"
-echo "Total Successes: $success_count"
-echo "Total Failures: $failure_count"
-echo "----------------------------------"
