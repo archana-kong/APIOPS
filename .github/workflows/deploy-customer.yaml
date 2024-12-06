@@ -52,7 +52,7 @@ jobs:
             --konnect-addr ${{vars.KONNECT_ADDR}}
 
       - name: Sleep for a couple of seconds 
-        run: sleep 5
+        run: sleep 10
       
       - name: Run Integration Tests
         run: |
