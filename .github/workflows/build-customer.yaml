@@ -70,6 +70,7 @@ jobs:
            
       - name: Validate connectivity to Konnect
         run: |
+          echo "CP:" ${{vars.KONNECT_INTERNAL_CP}} "token:" ${{ secrets.KONNECT_PAT }}  "addr:" ${{vars.KONNECT_ADDR}}
           deck gateway ping \
           --konnect-control-plane-name ${{vars.KONNECT_INTERNAL_CP}} \
           --konnect-token ${{ secrets.KONNECT_PAT }} \
