@@ -56,7 +56,7 @@ jobs:
       
       - name: Run Integration Tests
         run: |
-          for test_script in flight-data/flights/tests/*.sh; do
+          for test_script in flight-data/flights/test/*.sh; do
             echo "Running $test_script"
             bash "$test_script"
             if [ $? -ne 0 ]; then
