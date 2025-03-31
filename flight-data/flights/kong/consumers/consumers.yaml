@@ -9,5 +9,5 @@ consumers:
   - key: jsmith-key
   username: jsmith
 - keyauth_credentials:
-  - key: jsmith-key2
-  username: jsmith2
+  - key: jsmith-key3
+  username: jsmith3
