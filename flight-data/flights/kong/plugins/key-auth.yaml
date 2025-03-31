@@ -1,6 +1,6 @@
 plugins:
 - name: key-auth
-  service: customer-information-service
+  service: flights-service
   config:
     key_names:
     - apikey
