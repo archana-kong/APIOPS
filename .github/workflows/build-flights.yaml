@@ -38,11 +38,11 @@ jobs:
           flight-data/flights/kong/plugins/*.yaml \
           --output-file flight-data/flights/kong/.generated/kong.yaml
 
-      - name: Add consumer configuration
-        run: |
-          deck file merge flight-data/flights/kong/.generated/kong.yaml \
-          flight-data/flights/kong/consumers/*.yaml \
-          --output-file flight-data/flights/kong/.generated/kong.yaml
+      #  - name: Add consumer configuration
+       #   run: |
+        #    deck file merge flight-data/flights/kong/.generated/kong.yaml \
+        #    flight-data/flights/kong/consumers/*.yaml \
+        #    --output-file flight-data/flights/kong/.generated/kong.yaml
 
       - name: Add tags
         run: |
@@ -50,7 +50,7 @@ jobs:
           deck file add-tags flight-data flights \
           --selector "$.services[*]" \
           --selector "$.services[*].routes[*]"  \
-          --selector "$.consumers[*]" \
+          # --selector "$.consumers[*]" \
           --output-file flight-data/flights/kong/.generated/kong.yaml
 
       - name: Add environment Specific Patch
