@@ -1,13 +1,4 @@
 consumers:
 - keyauth_credentials:
-  - key: dfreese-key
-  username: dfreese
-- keyauth_credentials:
-  - key: jdoe-key
-  username: jdoe
-- keyauth_credentials:
-  - key: jsmith-key
-  username: jsmith
-- keyauth_credentials:
-  - key: jsmith-key3
-  username: jsmith3
+  - key: jsmith-key2
+  username: jsmith2
