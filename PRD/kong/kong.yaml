@@ -44,12 +44,12 @@ plugins:
   tags:
   - platform-repo-managed
 services:
-- host: flights.kongair
+- host: 192.168.1.20
   id: 0cef4d36-9c39-5ac2-9d9f-190d8ea8a252
   name: flights-service
   path: /
   plugins: []
-  port: 8080
+  port: 5052
   protocol: http
   routes:
   - id: 7b2dbd94-ec5b-5ae8-b6d5-4c8b16ce0b06
@@ -111,12 +111,12 @@ services:
   tags:
   - flight-data
   - platform-repo-managed
-- host: routes.kongair
+- host: 192.168.1.20
   id: 5bbc0ad8-3b7c-5dfe-a676-b28f30523a6f
   name: routes-service
   path: /
   plugins: []
-  port: 8081
+  port: 5053
   protocol: http
   routes:
   - id: 4da7a5e5-9e69-59af-a6c3-46a675c5bac6
