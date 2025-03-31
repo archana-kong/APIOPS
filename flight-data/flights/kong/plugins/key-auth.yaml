@@ -1,0 +1,6 @@
+plugins:
+- name: key-auth
+  service: flights-service
+  config:
+    key_names:
+    - apikey
