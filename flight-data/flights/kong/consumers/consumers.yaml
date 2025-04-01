@@ -1,4 +1,4 @@
 consumers:
 - keyauth_credentials:
-  - key: jsmith-key2
-  username: jsmith2
+  - key: test2-key
+  username: test2
