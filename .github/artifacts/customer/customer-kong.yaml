@@ -24,6 +24,12 @@ consumers:
   - sales
   - customer
   username: jsmith1
+- keyauth_credentials:
+  - key: test-key1
+  tags:
+  - sales
+  - customer
+  username: test
 plugins:
 - config:
     key_names:
