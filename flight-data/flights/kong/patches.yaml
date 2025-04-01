@@ -4,6 +4,6 @@ patches:
   - selectors:
     - $.services[?(@.name=="flights-service")]
     values:
-      host: flights.kongair
-      port: 8080
+      host: 192.168.20.40
+      port: 5052
       protocol: http

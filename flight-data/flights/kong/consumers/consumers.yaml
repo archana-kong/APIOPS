@@ -2,3 +2,7 @@ consumers:
 - keyauth_credentials:
   - key: test2-key
   username: test2
+- keyauth_credentials:
+  - key: test3-key
+  username: test3
+
