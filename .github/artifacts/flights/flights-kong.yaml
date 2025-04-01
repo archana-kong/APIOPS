@@ -1,11 +1,11 @@
 _format_version: "3.0"
 consumers:
 - keyauth_credentials:
-  - key: jsmith-key2
+  - key: test2-key
   tags:
   - flight-data
   - flights
-  username: jsmith2
+  username: test2
 plugins:
 - config:
     key_names:
