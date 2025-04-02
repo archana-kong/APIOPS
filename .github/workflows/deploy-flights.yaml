@@ -55,7 +55,7 @@ jobs:
         run: sleep 10
       
       - name: Run Integration Tests
-        if: false  # Skip this step
+        if: true  # Skip this step
         run: |
           for test_script in flight-data/flights/test/*.sh; do
             echo "Running $test_script"
