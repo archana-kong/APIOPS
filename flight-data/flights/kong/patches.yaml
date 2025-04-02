@@ -4,6 +4,6 @@ patches:
   - selectors:
     - $.services[?(@.name=="flights-service")]
     values:
-      host: 192.168.20.40
+      host: 10.68.87.27
       port: 5052
       protocol: http
