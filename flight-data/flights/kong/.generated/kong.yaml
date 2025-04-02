@@ -25,11 +25,11 @@ consumers:
   - flights
   username: jsmith1
 - keyauth_credentials:
-  - key: test1-key
+  - key: test2-key
   tags:
   - flight-data
   - flights
-  username: test1
+  username: test2
 plugins:
 - config:
     key_names:
