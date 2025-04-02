@@ -12,5 +12,5 @@ consumers:
   - key: jsmith1-key
   username: jsmith1
 - keyauth_credentials:
-  - key: test1-key
-  username: test1
+  - key: test2-key
+  username: test2
