@@ -53,7 +53,7 @@ plugins:
   name: proxy-cache-advanced
   route: flights-service_get-flights
 services:
-- host: 192.168.20.40
+- host: 10.68.87.27
   id: 0cef4d36-9c39-5ac2-9d9f-190d8ea8a252
   name: flights-service
   path: /
