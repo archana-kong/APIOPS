@@ -1,17 +1,35 @@
 _format_version: "3.0"
 consumers:
 - keyauth_credentials:
-  - key: test2-key
+  - key: dfreese-key
   tags:
   - flight-data
   - flights
-  username: test2
+  username: dfreese
 - keyauth_credentials:
-  - key: test3-key
+  - key: jdoe-key
   tags:
   - flight-data
   - flights
-  username: test3
+  username: jdoe
+- keyauth_credentials:
+  - key: jsmith-key
+  tags:
+  - flight-data
+  - flights
+  username: jsmith
+- keyauth_credentials:
+  - key: jsmith1-key
+  tags:
+  - flight-data
+  - flights
+  username: jsmith1
+- keyauth_credentials:
+  - key: test1-key
+  tags:
+  - flight-data
+  - flights
+  username: test1
 plugins:
 - config:
     key_names:
