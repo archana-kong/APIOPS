@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the endpoint URL
-ENDPOINT="http://localhost:8000/flights"  
+ENDPOINT="http://10.68.87.27:8000/flights"  
 API_KEY="jdoe-key"
 
 # Initialize counters for successes and failures
